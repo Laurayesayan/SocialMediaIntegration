@@ -29,11 +29,20 @@
                                     <action selector="logoutFromFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SlA-qI-C8X"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiW-Oz-fgo">
+                                <rect key="frame" x="167" y="123" width="40" height="30"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="facebookShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cVV-qD-fv9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="9xp-cz-cVF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="4f6-2U-2nv"/>
+                            <constraint firstItem="aiW-Oz-fgo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="167" id="CGa-mR-ewR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9xp-cz-cVF" secondAttribute="trailing" constant="17" id="H4W-tY-dil"/>
+                            <constraint firstItem="aiW-Oz-fgo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123" id="HYL-ui-sW3"/>
                             <constraint firstItem="jfv-k3-kRb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SBz-tv-rMO"/>
                             <constraint firstItem="jfv-k3-kRb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="dvA-rN-O5d"/>
                         </constraints>
