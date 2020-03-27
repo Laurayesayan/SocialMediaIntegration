@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y8X-bw-cyy">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Facebook-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SocialMediaIntegration_2_9" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,6 +65,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Facebook" id="CMM-sj-7HD"/>
                     <connections>
                         <outlet property="imageView" destination="cL1-UT-Z1f" id="NuQ-TY-w0U"/>
                         <outlet property="nameLabel" destination="u2x-Vi-Wj0" id="6dk-AP-qvX"/>
@@ -72,7 +73,68 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2956" y="138.98050974512745"/>
+        </scene>
+        <!--Google-->
+        <scene sceneID="3kO-0B-oTO">
+            <objects>
+                <viewController id="yae-Us-aAd" customClass="GoogleViewController" customModule="SocialMediaIntegration_2_9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AER-AB-Il0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8r-fq-WmU" customClass="GIDSignInButton">
+                                <rect key="frame" x="100" y="78" width="174" height="40"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="3sU-Pv-tYR"/>
+                                    <constraint firstAttribute="height" constant="40" id="9Fb-1X-Ofx"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmP-o4-5yb">
+                                <rect key="frame" x="164" y="230" width="57" height="30"/>
+                                <state key="normal" title="Sign out"/>
+                                <connections>
+                                    <action selector="signOutFromGoogle:" destination="yae-Us-aAd" eventType="touchUpInside" id="Xgl-4w-DEp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WmP-o4-5yb" firstAttribute="top" secondItem="g8r-fq-WmU" secondAttribute="bottom" constant="112" id="AnH-3B-JU1"/>
+                            <constraint firstItem="g8r-fq-WmU" firstAttribute="top" secondItem="Ttc-TI-HWn" secondAttribute="top" constant="78" id="gsh-wW-a4S"/>
+                            <constraint firstItem="g8r-fq-WmU" firstAttribute="leading" secondItem="Ttc-TI-HWn" secondAttribute="leading" constant="100" id="lfc-5r-Dre"/>
+                            <constraint firstItem="WmP-o4-5yb" firstAttribute="leading" secondItem="Ttc-TI-HWn" secondAttribute="leading" constant="164" id="xFE-zM-VNp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ttc-TI-HWn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Google" id="0OJ-Ye-5Dx"/>
+                    <connections>
+                        <outlet property="signInButton" destination="g8r-fq-WmU" id="Nyd-lF-xp5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A49-gK-srk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3792.8000000000002" y="137.18140929535232"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Rgk-XY-NgC">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Y8X-bw-cyy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y3N-NI-EtR">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="fbC-5B-2zK"/>
+                        <segue destination="yae-Us-aAd" kind="relationship" relationship="viewControllers" id="Dhp-KM-15A"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dkf-t4-NHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016.8" y="138.0809595202399"/>
         </scene>
     </scenes>
 </document>

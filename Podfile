@@ -8,5 +8,6 @@ target 'SocialMediaIntegration_2_9' do
     pod 'FacebookCore'
     pod 'FacebookLogin'
     pod 'FacebookShare'
+    pod 'GoogleSignIn'
 
 end
