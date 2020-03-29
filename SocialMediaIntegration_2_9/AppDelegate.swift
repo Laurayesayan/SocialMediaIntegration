@@ -11,36 +11,10 @@ import FacebookCore
 import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
-              withError error: Error!) {
-      if let error = error {
-        if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
-          print("The user has not signed in before or they have since signed out.")
-        } else {
-          print("\(error.localizedDescription)")
-        }
-        return
-      }
-    
-        if let user = user {
-            print(user.profile.name ?? "No name")
-        }
-        
-      // Perform any operations on signed in user here.
-//      let userId = user.userID                  // For client-side use only!
-//      let idToken = user.authentication.idToken // Safe to send to the server
-//      let fullName = user.profile.name
-//      let givenName = user.profile.givenName
-//      let familyName = user.profile.familyName
-//      let email = user.profile.email
-    }
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-        GIDSignIn.sharedInstance().clientID = "676507984305-78r8vok60pr06ao8kvo3hmam470s8kec.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().delegate = self
         return true
     }
 

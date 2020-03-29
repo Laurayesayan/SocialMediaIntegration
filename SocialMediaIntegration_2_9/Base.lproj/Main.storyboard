@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y8X-bw-cyy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y8X-bw-cyy">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -84,15 +84,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8r-fq-WmU" customClass="GIDSignInButton">
-                                <rect key="frame" x="100" y="78" width="174" height="40"/>
+                                <rect key="frame" x="137" y="39" width="88" height="40"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="174" id="3sU-Pv-tYR"/>
-                                    <constraint firstAttribute="height" constant="40" id="9Fb-1X-Ofx"/>
+                                    <constraint firstAttribute="height" constant="40" id="005-5t-ept"/>
+                                    <constraint firstAttribute="width" constant="88" id="zcN-vs-htg"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="signIn:" destination="yae-Us-aAd" eventType="valueChanged" id="fbh-8d-rW8"/>
+                                </connections>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="00H-zJ-BUS">
+                                <rect key="frame" x="137" y="163" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Ed9-OQ-bSs"/>
+                                    <constraint firstAttribute="width" constant="100" id="xoU-XV-aji"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mng-qX-5Ur">
+                                <rect key="frame" x="137" y="279" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmP-o4-5yb">
-                                <rect key="frame" x="164" y="230" width="57" height="30"/>
+                                <rect key="frame" x="153" y="97" width="57" height="30"/>
                                 <state key="normal" title="Sign out"/>
                                 <connections>
                                     <action selector="signOutFromGoogle:" destination="yae-Us-aAd" eventType="touchUpInside" id="Xgl-4w-DEp"/>
@@ -101,16 +117,21 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="WmP-o4-5yb" firstAttribute="top" secondItem="g8r-fq-WmU" secondAttribute="bottom" constant="112" id="AnH-3B-JU1"/>
-                            <constraint firstItem="g8r-fq-WmU" firstAttribute="top" secondItem="Ttc-TI-HWn" secondAttribute="top" constant="78" id="gsh-wW-a4S"/>
-                            <constraint firstItem="g8r-fq-WmU" firstAttribute="leading" secondItem="Ttc-TI-HWn" secondAttribute="leading" constant="100" id="lfc-5r-Dre"/>
-                            <constraint firstItem="WmP-o4-5yb" firstAttribute="leading" secondItem="Ttc-TI-HWn" secondAttribute="leading" constant="164" id="xFE-zM-VNp"/>
+                            <constraint firstItem="00H-zJ-BUS" firstAttribute="top" secondItem="WmP-o4-5yb" secondAttribute="bottom" constant="36" id="3zE-Cg-ZBg"/>
+                            <constraint firstItem="g8r-fq-WmU" firstAttribute="leading" secondItem="Ttc-TI-HWn" secondAttribute="leading" constant="137" id="AQD-rm-e8w"/>
+                            <constraint firstItem="00H-zJ-BUS" firstAttribute="leading" secondItem="Ttc-TI-HWn" secondAttribute="leading" constant="137" id="Uux-G6-VcS"/>
+                            <constraint firstItem="Mng-qX-5Ur" firstAttribute="centerX" secondItem="Ttc-TI-HWn" secondAttribute="centerX" id="g4C-Rw-kF9"/>
+                            <constraint firstItem="Mng-qX-5Ur" firstAttribute="top" secondItem="00H-zJ-BUS" secondAttribute="bottom" constant="16" id="kuT-6O-Vtu"/>
+                            <constraint firstItem="WmP-o4-5yb" firstAttribute="leading" secondItem="Ttc-TI-HWn" secondAttribute="leading" constant="153" id="twr-3V-nRM"/>
+                            <constraint firstItem="WmP-o4-5yb" firstAttribute="top" secondItem="g8r-fq-WmU" secondAttribute="bottom" constant="18" id="vaH-Lx-bGm"/>
+                            <constraint firstItem="g8r-fq-WmU" firstAttribute="top" secondItem="Ttc-TI-HWn" secondAttribute="top" constant="39" id="yb4-sV-pT5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ttc-TI-HWn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Google" id="0OJ-Ye-5Dx"/>
                     <connections>
-                        <outlet property="signInButton" destination="g8r-fq-WmU" id="Nyd-lF-xp5"/>
+                        <outlet property="userImageView" destination="00H-zJ-BUS" id="SQL-X7-PDo"/>
+                        <outlet property="userNameLabel" destination="Mng-qX-5Ur" id="BdL-bh-SIW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A49-gK-srk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

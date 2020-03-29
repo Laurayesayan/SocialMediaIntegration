@@ -135,8 +135,8 @@
 				F7794F5B2428D3510047F028 /* Frameworks */,
 				F7794F5C2428D3510047F028 /* Resources */,
 				F7B87B67242CB394005FB858 /* Embed Frameworks */,
-				0AF9B6A7690E437EC7095A0C /* [CP] Embed Pods Frameworks */,
-				242ACE8751C4F7A0A2933411 /* [CP] Copy Pods Resources */,
+				C43A40E426469AADB7DD36CF /* [CP] Embed Pods Frameworks */,
+				EA91B29E553602347611E177 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,40 +194,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0AF9B6A7690E437EC7095A0C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SocialMediaIntegration_2_9/Pods-SocialMediaIntegration_2_9-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SocialMediaIntegration_2_9/Pods-SocialMediaIntegration_2_9-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocialMediaIntegration_2_9/Pods-SocialMediaIntegration_2_9-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		242ACE8751C4F7A0A2933411 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SocialMediaIntegration_2_9/Pods-SocialMediaIntegration_2_9-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SocialMediaIntegration_2_9/Pods-SocialMediaIntegration_2_9-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocialMediaIntegration_2_9/Pods-SocialMediaIntegration_2_9-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		25F0731FEED7548552E4BF44 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,6 +214,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C43A40E426469AADB7DD36CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocialMediaIntegration_2_9/Pods-SocialMediaIntegration_2_9-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocialMediaIntegration_2_9/Pods-SocialMediaIntegration_2_9-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocialMediaIntegration_2_9/Pods-SocialMediaIntegration_2_9-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA91B29E553602347611E177 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocialMediaIntegration_2_9/Pods-SocialMediaIntegration_2_9-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocialMediaIntegration_2_9/Pods-SocialMediaIntegration_2_9-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocialMediaIntegration_2_9/Pods-SocialMediaIntegration_2_9-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
