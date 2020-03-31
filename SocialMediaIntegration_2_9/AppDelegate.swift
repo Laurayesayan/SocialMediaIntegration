@@ -9,6 +9,7 @@
 import UIKit
 import FacebookCore
 import GoogleSignIn
+import VK_ios_sdk
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,21 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
-//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-//        return
-//    }
     
-    @available(iOS 9.0, *)
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
-      return ApplicationDelegate.shared.application(app, open: url, options: options) || GIDSignIn.sharedInstance().handle(url)
+        return ApplicationDelegate.shared.application(app, open: url, options: options) || GIDSignIn.sharedInstance().handle(url) || VKSdk.processOpen(url, fromApplication: (options[UIApplication.OpenURLOptionsKey.sourceApplication] as! String))
     }
-    
-//    func application(_ application: UIApplication,
-//                     open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-//      return GIDSignIn.sharedInstance().handle(url)
-//    }
 
 }
 
