@@ -173,9 +173,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBj-im-ucI">
+                                <rect key="frame" x="167" y="379" width="40" height="30"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareToVK:" destination="YCn-am-YSv" eventType="touchUpInside" id="6Kh-RV-aDB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="scq-kO-Imk" firstAttribute="bottom" secondItem="tBj-im-ucI" secondAttribute="bottom" constant="209" id="0R2-aX-U2r"/>
                             <constraint firstItem="TbV-0q-ZKe" firstAttribute="top" secondItem="ln5-6W-n9P" secondAttribute="bottom" constant="26" id="5Fb-pe-sR6"/>
                             <constraint firstItem="CXz-c5-f12" firstAttribute="top" secondItem="TbV-0q-ZKe" secondAttribute="bottom" constant="8" id="9ih-zt-ijY"/>
                             <constraint firstItem="bIA-h2-1Vb" firstAttribute="leading" secondItem="scq-kO-Imk" secondAttribute="leading" constant="164" id="9xs-Uh-tDg"/>
@@ -183,6 +191,7 @@
                             <constraint firstItem="bIA-h2-1Vb" firstAttribute="top" secondItem="scq-kO-Imk" secondAttribute="top" constant="40" id="K34-YD-ewy"/>
                             <constraint firstItem="ln5-6W-n9P" firstAttribute="top" secondItem="bIA-h2-1Vb" secondAttribute="bottom" constant="8" id="Mx1-lX-XF5"/>
                             <constraint firstItem="CXz-c5-f12" firstAttribute="centerX" secondItem="scq-kO-Imk" secondAttribute="centerX" id="PFI-ZZ-JIG"/>
+                            <constraint firstItem="tBj-im-ucI" firstAttribute="leading" secondItem="scq-kO-Imk" secondAttribute="leading" constant="167" id="ZvD-uJ-zCQ"/>
                             <constraint firstItem="TbV-0q-ZKe" firstAttribute="leading" secondItem="scq-kO-Imk" secondAttribute="leading" constant="137" id="bTg-7q-FjX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="scq-kO-Imk"/>

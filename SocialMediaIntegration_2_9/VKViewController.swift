@@ -12,6 +12,9 @@ import VK_ios_sdk
 class VKViewController: UIViewController {
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    
+    let scope = ["email", "wall"]
+    
     var loggedIn = false {
         willSet {
             if newValue {
@@ -40,7 +43,7 @@ class VKViewController: UIViewController {
     
     @IBAction func signInVK(_ sender: Any) {
         self.logIn()
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: checkLog )
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(6), execute: checkLog )
         
     }
     
@@ -51,8 +54,7 @@ class VKViewController: UIViewController {
     }
     
     func logIn() {
-        VKSdk.wakeUpSession(["email"], complete:{ [weak self]
-            (state: VKAuthorizationState, error: Error?) -> Void in
+        VKSdk.wakeUpSession(scope, complete:{ [weak self] (state: VKAuthorizationState, error: Error?) -> Void in
             if state == .authorized {
                 let alertController = UIAlertController(title: "Logged in", message: "User already logged in.", preferredStyle: .alert)
                 self?.present(alertController, animated: true) {
@@ -60,7 +62,7 @@ class VKViewController: UIViewController {
                     self?.loggedIn = true
                 }
             } else {
-                VKSdk.authorize(["email"], with: .disableSafariController)
+                VKSdk.authorize(self?.scope, with: .disableSafariController)
             }
             return
         })
@@ -75,6 +77,13 @@ class VKViewController: UIViewController {
         loggedIn = false
     }
 
+    @IBAction func shareToVK(_ sender: Any) {
+        let vkShareLink = VKShareLink(title: "Test link", link: URL(string: "https://yandex.ru"))
+        let vkShare = VKShareDialogController()
+        vkShare.dismissAutomatically = true
+        vkShare.shareLink = vkShareLink
+        self.present(vkShare, animated: true, completion: nil)
+    }
 }
 
 extension VKViewController: VKSdkUIDelegate, VKSdkDelegate {
